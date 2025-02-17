@@ -6,6 +6,8 @@ rails db:migrate
 rails s
 ```
 
+![Screenshot 2025-02-17 at 20 59 15](https://github.com/user-attachments/assets/661a53d1-ee74-4ba8-8c2a-263f64ed9221)
+
 Limited Scope:
 I limited the scope of this task to the minimum required functionality:
 - Comments do not belong to a user/account (there are no users/accounts), cannot be edited of destroyed.
