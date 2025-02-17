@@ -1,5 +1,5 @@
 class Comment < ApplicationRecord
-  belongs_to :project
+  has_paper_trail on: %i[create]
 
-  default_scope { order(created_at: :desc) }
+  belongs_to :project
 end

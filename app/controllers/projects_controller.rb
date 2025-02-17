@@ -8,6 +8,7 @@ class ProjectsController < ApplicationController
 
   # GET /projects/1
   def show
+    @history = ProjectHistory.new(@project).events
   end
 
   # GET /projects/new
