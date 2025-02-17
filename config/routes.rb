@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :projects do
-    resources :comments, except: %i[index show new]
+    resources :comments, only: %i[create]
   end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
