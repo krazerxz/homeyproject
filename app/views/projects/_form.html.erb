@@ -13,7 +13,7 @@
 
   <div>
     <%= form.label :status, style: "display: block" %>
-    <%= form.select :status, options_for_select(project_status_titles_and_keys) %>
+    <%= form.select :status, options_for_select(project_status_titles_and_keys, project.status) %>
   </div>
 
   <div>

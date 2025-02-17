@@ -3,10 +3,19 @@
 <h1>Project (<%= @project.id %>)</h1>
 <%= render @project %>
 
+<h2>Versions</h1>
+<div id="versions">
+  <% @project.versions.reverse.each do |version| %>
+    <% from, to = version.changeset[:status] %>
+    <%= version.created_at %>
+    Status changed from <b><%= from %></b> to <b><%= to %></b>
+    <hr/>
+  <% end %>
+</div>
 <h2>Comments</h1>
-
 <div id="comments">
   <% @project.comments.each do |comment| %>
+    <%= comment.created_at %>
     <%= render comment %>
     <hr/>
   <% end %>
