@@ -1,6 +1,21 @@
 <p style="color: green"><%= notice %></p>
 
+<h1>Project (<%= @project.id %>)</h1>
 <%= render @project %>
+
+<h2>Comments</h1>
+
+<div id="comments">
+  <% @project.comments.each do |comment| %>
+    <%= render comment %>
+    <hr/>
+  <% end %>
+</div>
+
+<h3>New comment</h3>
+<%= render "comments/form", project: @project, comment: Comment.new %>
+
+<hr/>
 
 <div>
   <%= link_to "Edit this project", edit_project_path(@project) %> |
